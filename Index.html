@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es"> <!--le dice a los navegadores en que idioma esta escrito mi pagina-->
+<head>
+    <meta charset="UTF-8"> <!-- define la codificacion de caracteres de la pagina. el formato UTF-8 es el estandar universal, el hace que el navegador reconozca las tildes y las letra ñ-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- hace que la pagina sea adapte al nevagador de un celular-->
+    <title>AnimeGlitch - Tienda Online</title> <!-- nombre de pagina no aparece pero ayuda a que sea encontrada por google-->
+    <link rel="stylesheet" href="style.css?v=2"> <!-- use una archivo externo para colocar los estilos de la pagina, y con esto le digo al navegador que busque ese archivo y aplique los estilos que alli aparecen-->
+</head>
+<body>
+
+    <header class="navbar"> <!-- configuramos la cabecera de la pagina la barra azul donde se inicia sesion-->
+        <div class="logo">
+            <img src="animeglitch-letras.png" alt="AnimeGlitch Logo"> <!-- coloco mi logo de letras de la pagina-->
+        </div>
+        <div class="search-bar"> <!-- barra de busqueda-->
+            <input type="text" placeholder="Incia tu Busqueda..."> <!-- Es la barra de busqueda del usuario-->
+        </div>
+        <nav class="nav-links"> <!-- Menu del carrito de compra-->
+            <a href="login.html">Iniciar Sesión</a> <!-- cuando tenga los enlaces a donde debe iniciar sesion cambio el # por el enlace-->
+            <a href="registro.html">Registrarse</a>
+            <a href="carrito-compra.html" class="cart-icon">🛒</a>
+        </nav>
+    </header>
+
+    <section class="anime-banner"> <!-- colocamos todo lo que va dentro de la imagen-->
+        <div class="anime-content"> <!-- reserva el espacio para la imagen-->
+            <img src="animeglitch-logo-circular.png" alt="Logo circular" class="anime-logo">
+            <h1>Bienvenido a AnimeGlitch</h1>
+            <p>Descubre la mejor selección de mercancía oficial de anime, series y K-pop.</p>
+            <div class="anime-buttons">
+                <button class="btn-primary">Ver Novedades</button>
+                <button class="btn-secondary">Ofertas Especiales</button>
+            </div>
+        </div>
+    </section>
+
+    <main class="products-section">
+        <h2>Productos Destacados</h2>
+        
+        <div class="categories-tabs">
+            <button class="tab active">Todos</button>
+            <button class="tab">Artículos de Colección</button>
+            <button class="tab">Papelería</button>
+            <button class="tab">Moda</button>
+            <button class="tab">Estilos de Vida</button>
+        </div>
+
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="collar-one-piece.png" alt="Accesorio">
+                <h3>Collar de One Piece</h3>
+                <p class="price">$5.00</p>
+                <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+
+      <div class="product-card">
+                <img src="manga-jujutsu-kaisen.png" alt="manga">
+                <h3>Manga Jujutsu Kaisen Tomos variados</h3>
+                <p class="price">$15.00</p>
+                <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+
+       <div class="product-card">
+                <img src="death-note.png" alt="papeleria">
+                <h3>Libreta Death Note con Collar y Pluma</h3>
+                <p class="price">$20.00</p>
+                <button class="btn-add-cart">Añadir al Carrito</button>
+                </div>
+
+           </div> </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>AnimeGlitch</h3>
+                <p>Tu tienda de confianza para mercancía oficial de anime, series y K-pop.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces Rápidos</h4>
+                <a href="#">Sobre Nosotros</a>
+                <a href="#">Envíos</a>
+                <a href="#">Devoluciones</a>
+                <a href="#">Contacto</a>
+            </div>
+            <div class="footer-socials">
+                <h4>Síguenos</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+                <a href="#">TikTok</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AnimeGlitch. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

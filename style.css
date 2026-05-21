@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Libre Barkesville', Serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+/* 1. Header (Azul oscuro de la barra superior) */
+.navbar {
+    background-color: #1a237e; /* Ajusta al tono exacto de la barra */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 50px;
+    color: white;
+}
+
+.logo img {
+    height: 50px;
+    display: block
+}
+
+.search-bar input {
+    width: 400px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Libre Barkesville', Serif; 
+}
+
+.nav-links a {
+    color: #e0e0e0;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 15px;
+    font-weight: 600;          /* Hace las letras un poquito más gruesas y firmes */
+    position: relative;        /* Preparación para el truco de la línea animada */
+    padding: 5px 0;
+    transition: color 0.3s ease; /* Transición suave de color */
+}
+
+/* Efecto cuando pasas el mouse por encima de los textos */
+.nav-links a:hover {
+    color: #2979ff;            /* Cambia a tu azul claro brillante, ¡estilo neón! */
+}
+
+/* Tratamiento especial exclusivo para el Emoji del Carrito */
+.nav-links a.cart-icon {
+    font-size: 18px;           /* Hace el carrito un poco más grande */
+    background-color: rgba(255, 255, 255, 0.1); /* Le crea un pequeño círculo sutil de fondo */
+    padding: 6px 10px;
+    border-radius: 50px;       /* Lo hace perfectamente redondo */
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover exclusivo para el Carrito */
+.nav-links a.cart-icon:hover {
+    background-color: #2979ff; /* El círculo se enciende en azul claro */
+    color: white;              /* El emoji se mantiene firme */
+    box-shadow: 0 0 10px rgba(41, 121, 255, 0.5); /* Destello neón alrededor del carrito */
+}
+
+/* 2. Banner Principal */
+.anime-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('anime-fondo.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.anime-banner h1{
+    font-family: 'Playfair Display', Serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.anime-logo {
+    width: 300px;
+    margin-bottom: 15px;
+}
+
+.anime-buttons button {
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 25px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Libre Barkesville', Serif;
+    transition: all 0.3s ease; /* la animacion de cambio de color*/
+}
+
+.btn-primary { 
+    background-color: #1a237e; 
+    color: white;
+ }
+
+.btn-primary:hover {
+    background-color: #2979ff;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(41, 121, 255, 0.4);
+ }
+
+.btn-secondary { 
+    background-color: white;
+    color: #1a237e;
+    border-color: white !important;
+ }
+
+.btn-secondary:hover {
+    background-color: #2979ff;
+    color: white;
+    border-color: white !important;
+    transform: translateY(-3px);
+  }
+
+.categories-tabs {
+    display: flex;
+    justify-content: center; /* Centra los botones en la pantalla */
+    gap: 15px;               /* Separa los botones entre sí */
+    margin-bottom: 40px;     /* Separa los botones de las cajas de productos */
+    flex-wrap: wrap;         /* Si estás en celular, los botones se acomodan abajo ordenadamente */
+    margin-top: 30px
+}
+
+/* Estilo base para cada botón individual */
+.tab {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #1a237e;            /* Texto azul oscuro (el de tu navbar) */
+    border: 2px solid #1a237e; /* Borde azul delgado */
+    padding: 10px 20px;        /* Espacio interno para que no se vea apretado */
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 25px;       /* Hace que los botones sean completamente ovalados/redondos */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Efecto de animación suave al pasar el mouse */
+}
+
+/* Efecto cuando el usuario pasa el mouse por encima (Hover) */
+.tab:hover {
+    background-color: #2979ff; /* Se pinta de azul brillante */
+    color: white;              /* Las letras cambian a blanco */
+    border-color: #2979ff;     /* El borde cambia a azul brillante */
+    transform: translateY(-2px); /* El botón sube 2 píxeles flotando sutilmente */
+}
+
+/* Estilo exclusivo para el botón que está seleccionado (Active) */
+.tab.active {
+    background-color: #1a237e; /* Fondo azul oscuro permanente */
+    color: white;              /* Letras blancas */
+    border-color: #1a237e;
+    box-shadow: 0 4px 10px rgba(26, 35, 126, 0.3); /* Pequeña sombra de luz azul */
+}
+
+/* 3. Rejilla de Productos (Grid) */
+.products-section {
+    padding: 40px 50px;
+    text-align: center;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 30px;
+    margin-top: 30px;
+    aling-items: stretch;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+}
+
+.product-card img {
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    object-position: center;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.1rem;
+    line-height: 1.3;
+    margin-bottom: 5px;
+}
+
+.product-card .price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+.btn-add-cart {
+    background-color: #1a237e;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 4. Footer Azul Eléctrico */
+.footer {
+    background-color: #1565c0; /* El azul brillante de tu maqueta */
+    color: white;
+    padding: 40px 50px 20px;
+    margin-top: 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-links a, .footer-socials a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    font-size: 12px;
+}
