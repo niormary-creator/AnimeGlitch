@@ -5,6 +5,11 @@
     font-family: 'Libre Barkesville', Serif;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 body {
     background-color: #f4f6f9;
     color: #333;
@@ -249,4 +254,56 @@ body {
     padding-top: 20px;
     border-top: 1px solid rgba(255,255,255,0.2);
     font-size: 12px;
+}
+/* 5. Adaptación para Celulares (Media Query) */
+@media (max-width: 768px) {
+    /* Ajustes del Navbar */
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .search-bar input {
+        width: 100%; /* Cambia los 400px fijos por el ancho total del celular */
+        max-width: 320px;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        margin-left: 0; /* Elimina el margen izquierdo molesto en móvil */
+    }
+
+    /* Ajustes del Banner */
+    .anime-banner h1 {
+        font-size: 2rem; /* Reduce el tamaño del título para que no se corte */
+    }
+
+    .anime-logo {
+        width: 80%; /* El logo se encoge proporcionalmente */
+    }
+
+    /* Ajustes de la Rejilla de Productos */
+    .products-section {
+        padding: 20px; /* Menos espacio a los lados para ganar pantalla */
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr !important; /* Pasa de 3 columnas a 1 sola columna vertical */
+        gap: 20px;
+    }
+
+    /* Ajustes del Footer */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
 }
